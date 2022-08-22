@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report a Cyber Incident</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 id="title">Cyber Incident Reporting Form</h1>
+        <p id="description">Report a Cyber Security incident or concern.</p>
+      </header>
+      <form id="survey-form">
+        <fieldset id="contact-info">
+          <h2>Contact Info</h2>
+          <label id="name-label">Name: 
+            <input id="name" type="text" required placeholder="Your First and Last Name" />
+          </label>
+          <label id="email-label">Email: 
+            <input id="email" type="email" required placeholder="name@domain.com"/>
+          </label>
+          <label id="phone-label">Phone Number:
+            <input id="phone" type="tel" placeholder="111.222.3333"/>
+          </label>
+        </fieldset>
+        <fieldset id="classification">
+          <h2>Classification</h2>
+          <label>Which <i>Mitre ATT&CK Framework</i> <a href="https://attack.mitre.org/tactics/enterprise/">Tactic</a> is most applicable?
+            <select id="dropdown" required>
+              <option value="" disabled selected>Select one.</option>
+              <option value="TA0043">Reconnaissance</option>
+              <option value="TA0042">Resource Development</option>
+              <option value="TA0001">Initial Access</option>
+              <option value="TA0002">Execution</option>
+              <option value="TA0003">Persistence</option>
+              <option value="TA0004">Privilege Escalation</option>
+              <option value="TA0005">Defense Evasion</option>
+              <option value="TA0006">Credential Access</option>
+              <option value="TA0007">Discovery</option>
+              <option value="TA0008">Lateral Movement</option>
+              <option value="TA0009">Collection</option>
+              <option value="TA0011">Command and Control</option>
+              <option value="TA0010">Exfiltration</option>
+              <option value="TA0040">Impact</option>
+            </select>
+          </label>
+          <label id="number-label">Which <i>Mitre ATT&CK Framework</i> <a href="https://attack.mitre.org/techniques/enterprise/">Technique</a> is most applicable?
+            <input id="number" type="number" min="1000" max="2000" placeholder="1548"/>
+          </label>
+          <div class="list">
+            <p>Severity</p>
+            <label class="label-sev"><input name="severity" type="radio" value="high"/> High</label>
+            <label class="label-sev"><input name="severity" type="radio" value="medium"/> Medium</label>
+            <label class="label-sev"><input name="severity" type="radio" value="low"/> Low</label>
+          </div>
+        </fieldset>
+        <fieldset id="incident">
+          <h2>Incident Description</h2>
+          <div class="services list">
+            <p>Requested services</p>
+            <label class="label-serv"><input type="checkbox" value="serv-socmon" />Investigation</label>
+            <label class="label-serv"><input type="checkbox" value="serv-ir" />Incident Response</label>
+            <label class="label-serv"><input type="checkbox" value="serv-hunt" />Threat Hunting</label>
+            <label class="label-serv"><input type="checkbox" value="serv-rem" />Remediation Consulting</label>
+            <label class="label-serv"><input type="checkbox" value="sert-table" />Tabletop Scenarios</label>
+          </div>
+          <label class="details">Additional details:
+            <textarea rows="20" cols="40" placeholder="Please provide additional details, answering the following questions:
+
+1. When did the incident occur?
+
+2. What user accounts and devices did the incident occur?
+
+3. What impact did the incident have?
+
+4. What actions have already been taken in response to this incident?"></textarea>
+          </label>
+        </fieldset>
+        <input id="submit" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
