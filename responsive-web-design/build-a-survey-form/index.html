@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+  <div class="overlay">
     <div class="container">
       <header class="header">
         <h1 id="title">Cyber Incident Reporting Form</h1>
@@ -14,19 +15,18 @@
       </header>
       <form id="survey-form">
         <fieldset id="contact-info">
-          <h2>Contact Info</h2>
-          <label id="name-label">Name: 
-            <input id="name" type="text" required placeholder="Your First and Last Name" />
-          </label>
-          <label id="email-label">Email: 
-            <input id="email" type="email" required placeholder="name@domain.com"/>
-          </label>
-          <label id="phone-label">Phone Number:
-            <input id="phone" type="tel" placeholder="111.222.3333"/>
-          </label>
+          <legend>Contact Info</legend>
+          <label id="name-label">Name: </label>
+          <input id="name" type="text" required placeholder="Your First and Last Name" />
+          
+          <label id="email-label">Email: </label>
+          <input id="email" type="email" required placeholder="name@domain.com"/>
+          
+          <label id="phone-label">Phone Number: </label>
+          <input id="phone" type="tel" placeholder="111.222.3333"/>
         </fieldset>
         <fieldset id="classification">
-          <h2>Classification</h2>
+          <legend>Classification</legend>
           <label>Which <i>Mitre ATT&CK Framework</i> <a href="https://attack.mitre.org/tactics/enterprise/">Tactic</a> is most applicable?
             <select id="dropdown" required>
               <option value="" disabled selected>Select one.</option>
@@ -46,27 +46,26 @@
               <option value="TA0040">Impact</option>
             </select>
           </label>
-          <label id="number-label">Which <i>Mitre ATT&CK Framework</i> <a href="https://attack.mitre.org/techniques/enterprise/">Technique</a> is most applicable?
-            <input id="number" type="number" min="1000" max="2000" placeholder="1548"/>
-          </label>
+          <label id="number-label">Which <i>Mitre ATT&CK Framework</i> <a href="https://attack.mitre.org/techniques/enterprise/">Technique</a> is most applicable?</label>
+          <input id="number" type="number" min="1000" max="2000" placeholder="1548"/>
           <div class="list">
-            <p>Severity</p>
+            <p>Severity:</p>
             <label class="label-sev"><input name="severity" type="radio" value="high"/> High</label>
             <label class="label-sev"><input name="severity" type="radio" value="medium"/> Medium</label>
             <label class="label-sev"><input name="severity" type="radio" value="low"/> Low</label>
           </div>
         </fieldset>
         <fieldset id="incident">
-          <h2>Incident Description</h2>
+          <legend>Incident Description</legend>
           <div class="services list">
-            <p>Requested services</p>
+            <p>Requested services:</p>
             <label class="label-serv"><input type="checkbox" value="serv-socmon" />Investigation</label>
             <label class="label-serv"><input type="checkbox" value="serv-ir" />Incident Response</label>
             <label class="label-serv"><input type="checkbox" value="serv-hunt" />Threat Hunting</label>
             <label class="label-serv"><input type="checkbox" value="serv-rem" />Remediation Consulting</label>
             <label class="label-serv"><input type="checkbox" value="sert-table" />Tabletop Scenarios</label>
           </div>
-          <label class="details">Additional details:
+          <label class="details">Additional details: </label>
             <textarea rows="20" cols="40" placeholder="Please provide additional details, answering the following questions:
 
 1. When did the incident occur?
@@ -76,10 +75,10 @@
 3. What impact did the incident have?
 
 4. What actions have already been taken in response to this incident?"></textarea>
-          </label>
         </fieldset>
         <input id="submit" type="submit" value="Submit" />
       </form>
     </div>
+  </div>
   </body>
 </html>

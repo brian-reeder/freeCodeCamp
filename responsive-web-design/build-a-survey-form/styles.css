@@ -1,87 +1,104 @@
+*,
+*::before, 
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  background-color:#282828;
-  color: #009900;
+  
+  background-image: linear-gradient(115deg, rgba(40, 42, 54, 0.9), rgba(40, 42, 54, 0.7) ),url('https://img.freepik.com/premium-vector/cyber-security-concept-with-hud-element-blue-tone-background_99087-130.jpg?w=1480');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
   width: 100%;
-  height: 100vh;
+  height: 100%;
   margin: 0;
-  font-family: Verdana, Sans-Serif;
+  padding: 0;
+  font-family: "Trebuchet MS", Sans-Serif;
+  color: #f8f8f2; /* Dracula Foreground */
+}
+
+header {
+  text-align: center;
+  color: #50fa7b; /* Dracula Green */
+}
+
+
+#description {
+  color: #6272a4; /* Dracula Comment */
+  font-style: italic;
+  font-family: "Trebuchet MS", Sans-Serif;
 }
 
 .container {
   margin: 0 auto;
   max-width: 600px;
-  min-width: 500px;
+  min-width: 300px;
 }
+
 form {
-  background-color: #181818;
-  padding-bottom: 5px;
+  margin-bottom: 15px;
 }
 
-textarea {
+fieldset {
+  background-color: #282a36; /* Dracula Background */
+  border-color: black;
+  margin: 20px 0;
+}
+fieldset:last-of-type {
+  margin-bottom: 5px;
+}
+legend {
+  background-color: #44475a; /* Dracula Background */
+  border: 2px solid black;
+  color: #bd93f9; /* Dracula Purple */
+  font-family: "Consolas", monospace;
+  padding: 0 0.5rem;
+}
+
+label {
   display: block;
-  width: 100%;
-  padding-top: 10px;
-  resize: none;
+  padding: 5px 0;
 }
 
-h2 {
-  margin-top: 10px;
+input, textarea, select {
+  background-color: #44475a; /* Dracula Current Line */
+  color: #f8f8f2; /* Dracula Foreground */
+  border: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #6272a4; /* Dracula Comment */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="submit"] {
-  margin: 1em auto;
-  display:block;
-  width: 60%;
-  font-size: 1.1em;
-}
-
-input[type="radio"], input[type="checkbox"] {
-  display: inline-block;
-  padding:0;
-}
-
-
-label {
-  padding-top: 15px;
-  padding-bottom: 10px;
-}
-
-.label-sev, .label-serv {
-  padding: 0;
-  color: darkgrey;
-}
-
-h1, h2 {
-  font-family: Courier, Monospace;
-  margin-bottom: 0;
-}
-
-label, input {
   display: block;
+  margin: 0 auto;
+  width: 40%;
+  
 }
 
-input, textarea, select, option {
-  background-color:#282828;
-  color: White;
+a {
+  color: #f1fa8c;
 }
 
-.services > label {
-  display: block;
-}
-
-.details {
-  display: block;
-  padding-top: 15px;
+textarea {
+  width: 99%;
+  resize: none;
 }
 
 .list > p {
-  margin-bottom: 0;
+  margin: 10px 0 0 0;
 }
 
-#title, #description {
-  text-align: center;
-}
-
-#description {
-  font-style: italic;
+.services {
+  margin-bottom: 10px;
 }
